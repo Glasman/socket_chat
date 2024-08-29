@@ -58,7 +58,6 @@ io.on("connection", (socket) => {
     callback();
   });
 
-
   if (!socket.recovered) {
     // Wrap in an async function to use await
     (async () => {
