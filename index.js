@@ -74,7 +74,7 @@ app.get("/", (req, res) => {
 
 
 io.on('connection', (socket) => {
-    socket.on('chat message', async (msg) => {
+    socket.on('chat message', async (msg, clientOffset, callback) => {  
       let result;
       try {
         // store the message in the database
